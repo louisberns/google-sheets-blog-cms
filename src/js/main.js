@@ -1,7 +1,7 @@
 const app = function () {
-	const API_BASE = 'https://script.google.com/macros/s/AKfycbyP5Rifn7Q05Qcd7CTfm-AOouFHHvUAvCVVuKSfQu-LCqJocP8/exec';
-	const API_KEY = 'abcdef';
-	const CATEGORIES = ['general', 'financial', 'technology', 'marketing'];
+	const API_BASE = 'https://script.google.com/macros/s/AKfycbyaZLlcRE1xnoPKHPd7RxJup906dzoVBw4IIE3Yxq7XNxuhkZK2/exec';
+	const API_KEY = 'akJ4767GHTj89';
+	const CATEGORIES = ['suporte', 'desenvolvimento', 'marketing', 'UX'];
 
 	const state = {activePage: 1, activeCategory: null};
 	const page = {};
@@ -130,7 +130,7 @@ const app = function () {
 
 	function _setActiveCategory (category) {
 		state.activeCategory = category;
-		
+
 		const label = category === null ? 'no filter' : category;
 		Array.from(page.filter.children).forEach(function (element) {
   			element.classList = label === element.innerHTML.toLowerCase() ? 'selected' : '';
